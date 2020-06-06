@@ -3,25 +3,29 @@
 <div class="row">
     <div class="col-md-6 mx-auto">
         <form method="POST" action="">
-            <h3 class="font-weight-bold text-center">Create Account</h3>
+            <h3 class="font-weight-bold text-center">Create Account or <a href="login.php">login</a></h3>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="first_name">First name</label>
+                    <p class="mb-0 small text-danger">{{ first_name_error }}</p>
                     <input id="first_name" class="form-control" type="text" name="first_name">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="last_name">Last name</label>
-                    <input id="last_name" class="form-control" type="text" name="last_name">
+                    <p class="mb-0 small text-danger">{{last_name_error}}</p>
+                    <input id="last_name" class="form-control" type="text" name="last_name" >
                 </div>
             </div>
 
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="email">Email address</label>
-                    <input id="email" class="form-control" type="text" name="email">
+                    <p class=" mb-0 small text-danger">{{email_error}}</p>
+                    <input id="email" class="form-control" type="text" name="email" >
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="department">Select your department</label>
+                    <label for="department" class=" mb-2">Select your department</label>
+                    <p class=" mb-0"> </p>
                     <select id="department" class="form-control" name="department">
                         <option>Telecommunications</option>
                         <option>Computer Engineering</option>
@@ -32,16 +36,19 @@
 
             <div class="form-group">
                 <label for="password">Create a password</label>
-                <input id="password" class="form-control" type="password" name="password">
+                <input id="password" class="form-control" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
             </div>
 
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="registration_number">Registration number</label>
+                    <p class="mb-0 small text-danger">{{registration_number_error}}</p>
                     <input id="registration_number" class="form-control" type="text" name="registration_number">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="telephone_number">Telephone number</label>
+                    <p class=" mb-0 small text-danger">{{telephone_number_error}}</p>
                     <input id="telephone_number" class="form-control" type="text" name="telephone_number">
                 </div>
             </div>
@@ -50,14 +57,16 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="label-control">Date of birth</label>
-                        <input type="text" class="form-control datetimepicker" value="10/05/2010">
+                       
+                        <input type="date" class="form-control datetimepicker" id="date_of_birth" name="date_of_birth" value="">
+                       
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <p class="text-muted">Gender</p>
                     <div class="form-radio form-check-inline">
-                        <input id="male" class="form-check-input" type="radio" name="gender" value="1">
+                        <input id="male" class="form-check-input" type="radio" name="gender" value="male">
                         <label for="male" class="form-check-label">Male</label>
                     </div>
                     <div class="form-radio form-check-inline">

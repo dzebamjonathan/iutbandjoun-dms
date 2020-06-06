@@ -18,8 +18,7 @@
     <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
-                    UITD </a>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="navbar-toggler-icon"></span>
@@ -66,9 +65,10 @@
                     <ul class="list-group">
                         <a href="dashboard.php" class="list-group-item list-group-item-action active">dashboard</a>
                         <a href="inbox.php" class="list-group-item list-group-item-action">Inbox</a>
-                        <a href="sentbox.php" class="list-group-item list-group-item-action">Sentbox</a>
+                        
+                        <a href="messages.php" class="list-group-item list-group-item-action">messages</a>
                         <a href="settings.php" class="list-group-item list-group-item-action">profile settings</a>
-                        <a href="#" class="list-group-item list-group-item-action">logout</a>
+                        <a href="../logout.php" class="list-group-item list-group-item-action">logout</a>
                     </ul>
                 </aside> 
                 <div class="col-md-8 mx-auto">

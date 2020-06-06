@@ -5,16 +5,18 @@
         <thead class="thead-success">
             <tr>
                 <th>#</th>
+                <th>Subject</th>
                 <th>Message</th>
                 <th>Option</th>
             </tr>
         </thead>
         <tbody>
-            {% for counter in range(1, 10) %}
+            {% for message in messages %}
             <tr>
 
-                <td>{{ counter }}</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam quae exercitationem facere mollitia odio est error nesciunt numquam maxime, officia sed placeat corporis accusamus fugit qui ea, quas eligendi</td>
+                <td>{{ message.id }}</td>
+                <td>{{ message.subject }}</td>
+                <td>{{ message.content }}</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Button group">
                         <button class="btn btn-sm btn-success">read</button>
