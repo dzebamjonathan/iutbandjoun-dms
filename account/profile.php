@@ -104,6 +104,13 @@ if ($get_user->num_rows == 1)
                     <option>Computer Engineering</option>
                     <option>Civil Engineering</option>
                 </select>
+                <div>
+                   <form action="UploadContent.php" method="POST" enctype="multipart/form-data">
+                        File:
+                         <input type="file" name="image"> <input type="submit" value="Upload">
+                   </form>
+                         
+                </div>
             </div>
         </div>
 
